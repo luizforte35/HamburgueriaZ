@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado pressionado -->
+    <item android:drawable="@color/cor_botao_ativo"
+          android:state_pressed="true"/>
+    <!-- Estado normal -->
+    <item android:drawable="@color/cor_botao_normal"/>
+</selector>

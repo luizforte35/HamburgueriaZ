@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cor_botao_ativo">#FF5722</color> <!-- Cor do botão quando pressionado -->
+    <color name="cor_botao_normal">#FF9800</color> <!-- Cor do botão normal -->
+</resources>

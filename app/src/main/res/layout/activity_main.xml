@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FAÇA SEU PEDIDO"
+        android:textAppearance="@style/EstiloTexto"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Campo de Nome -->
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu nome"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="8dp" />
+
+    <!-- Opções do Pedido -->
+    <CheckBox
+        android:id="@+id/checkBoxBacon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bacon"
+        style="@style/EstiloCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNome"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxQueijo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Queijo"
+        style="@style/EstiloCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxBacon"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxOnion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Onion Rings"
+        style="@style/EstiloCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxQueijo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Quantidade -->
+    <TextView
+        android:id="@+id/textViewQuantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUANTIDADE"
+        android:textAppearance="@style/EstiloTexto"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxOnion"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Botões de Quantidade -->
+
+    <Button
+        android:id="@+id/buttonMenos"
+        style="@style/EstiloBotao"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="-"
+        android:textColorLink="@color/cor_botao_ativo"
+        app:layout_constraintStart_toEndOf="@+id/textViewQuantidade"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuantidade" />
+
+    <Button
+        android:id="@+id/buttonMais"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+       style="@style/EstiloBotao"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/textViewContador"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuantidade" />
+
+    <TextView
+        android:id="@+id/textViewContador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/buttonMenos"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuantidade" />
+
+    <!-- Resumo do Pedido -->
+    <TextView
+        android:id="@+id/textViewResumo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESUMO DO PEDIDO"
+        android:textAppearance="@style/EstiloTexto"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMais"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewResumoPedido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nenhum item selecionado"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResumo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botão de Finalização -->
+    <Button
+        android:id="@+id/buttonFazerPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FAZER PEDIDO"
+        style="@style/EstiloBotao"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResumoPedido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
